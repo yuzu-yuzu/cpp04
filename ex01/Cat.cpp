@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hjiang <hjiang@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/03 13:08:37 by hjiang            #+#    #+#             */
+/*   Updated: 2025/12/03 13:08:37 by hjiang           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include"Cat.hpp"
+#include"Brain.hpp"
 
 Cat::Cat() : Animal("🐱 Cat")
 {
@@ -15,7 +28,7 @@ Cat::Cat(std::string type) : Animal(type)
 
 Cat::Cat(const Cat &copy) : Animal(copy)
 {
-    this->brain = new Brain(coppy.brain);
+    this->brain = new Brain(*copy.brain);
     std::cout << "🐱 Copy of Cat "<< copy.type << " called" << std::endl;
 }
 
@@ -23,7 +36,7 @@ Cat &Cat::operator=(const Cat &other)
 {
     if (this != &other)
     {   
-        *this->brain = *other->brain // pk * ?
+        *this->brain = *other.brain;
         Animal::operator=(other);
     }
     std::cout << "🐱 Copy assignment of " << other.type << "called" << std::endl;
@@ -43,7 +56,7 @@ void Cat::makeSound() const
 
 Brain &Cat::getbrain() const
 {
-    returb(*this->brain);
+    return(*this->brain);
 }
 
 void Cat::setbrain(Brain const &brain)

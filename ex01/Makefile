@@ -1,4 +1,4 @@
-NAME = Polymorpphism
+NAME = ON_FIRE
 
 CC = c++ 
 CFLAGS = -Wall -Wextra -Werror -g -std=c++98 -g3
@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -Werror -g -std=c++98 -g3
 #-------------------------- Sources -----------------------------#
 
 
-SRCS = main.cpp  Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+SRCS = main.cpp  Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
