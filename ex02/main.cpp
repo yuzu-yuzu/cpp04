@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "WrongAnimal.hpp"
@@ -19,7 +20,8 @@
 
 int main()
 {
-    Animal *tab[10];
+    AAnimal *tab[10];
+    //AAnimal *pet = new AAnimal(); //affiche "object of sbstract class"
 
     for(int a =0; a < 5; a++)
         tab[a] = new Dog();
@@ -29,8 +31,8 @@ int main()
         tab[nb]->makeSound();
     for(int n =0; n < 10; n++)
         delete tab[n];
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    const AAnimal* j = new Dog();
+    const AAnimal* i = new Cat();
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
     delete j;//should not create a leak

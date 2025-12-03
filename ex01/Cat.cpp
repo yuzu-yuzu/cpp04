@@ -15,7 +15,6 @@
 
 Cat::Cat() : Animal("🐱 Cat")
 {
-    this->type = "🐱 Cat";// est ce utile ?
     this->brain = new Brain();
     std::cout << "🐱 Cat constructor called" << std::endl;
 }

@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hjiang <hjiang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/03 13:10:49 by hjiang            #+#    #+#             */
-/*   Updated: 2025/12/03 13:10:49 by hjiang           ###   ########.fr       */
+/*   Created: 2025/12/03 13:10:07 by hjiang            #+#    #+#             */
+/*   Updated: 2025/12/03 13:10:07 by hjiang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
-#include<iostream>
-#include"WrongAnimal.hpp"
-#include"Brain.hpp"
+#ifndef CAT_HPP
+#define CAT_HPP
+#include <iostream>
+#include "Animal.hpp"
+#include "AAnimal.hpp"
+#include "Brain.hpp"
 
-class WrongCat : public WrongAnimal
+class Cat : public AAnimal
 {
     public:
-        WrongCat();
-        WrongCat(std::string type);
-        WrongCat(const WrongCat &copy);
-        WrongCat &operator=(const WrongCat &other);
-        ~WrongCat();
+        Cat();
+        Cat(std::string type);
+        Cat(const Cat &copy);
+        Cat &operator=(const Cat &other);
+        virtual ~Cat();
 
         void makeSound() const;
         Brain &getbrain() const;
         void setbrain(Brain const &brain); // faut il settype ?
-        
-        private:
-            Brain *brain;
+
+    private:
+        Brain *brain;
 };
 
 #endif

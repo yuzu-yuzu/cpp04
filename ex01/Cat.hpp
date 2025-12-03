@@ -27,7 +27,7 @@ class Cat : public Animal
 
         void makeSound() const;
         Brain &getbrain() const;
-        void setbrain(Brain const &brain); // faut il settype ?
+        void setbrain(Brain const &brain);
 
     private:
         Brain *brain;
